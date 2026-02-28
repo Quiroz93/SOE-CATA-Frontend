@@ -46,14 +46,7 @@ onMounted(() => {
       </div>
     </div>
 
-    <div v-if="store.loading" :class="$style.loading">Cargando programas...</div>
-    <div v-else>
-      <div v-if="store.programas.length === 0" :class="$style.noProgramas">No hay programas disponibles.</div>
-      <div :class="$style.grid">
-        <ProgramaCard v-for="programa in store.programas" :key="programa.id" :programa="programa" />
-      </div>
-      <div v-if="store.meta.total" :class="$style.total">Total programas ofertados: {{ store.meta.total }}</div>
-    </div>
+    <ProgramasList />
 
     <div :class="$style.acciones">
       <router-link to="/ofertas" :class="$style.botonPrincipal">Ver Ofertas</router-link>
