@@ -8,16 +8,20 @@ export const useProgramasStore = defineStore('programas', {
     programas: [] as Programa[],
     programaActual: null as Programa | null,
     meta: {} as ApiMeta,
-    loading: false
+    loading: false,
+    error: ''
   }),
 
   actions: {
     async fetchProgramas(filters?: Record<string, any>) {
       this.loading = true;
+      this.error = '';
       try {
         const { data, meta } = await programasService.listar(filters);
         this.programas = data;
         this.meta = meta ?? {};
+      } catch (err: any) {
+        this.error = err?.message || 'Error al cargar programas.';
       } finally {
         this.loading = false;
       }

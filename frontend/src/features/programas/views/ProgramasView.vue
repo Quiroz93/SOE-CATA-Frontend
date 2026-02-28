@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
 import { useProgramasStore } from '../stores/programas.store';
-import ProgramaCard from '../components/ProgramaCard.vue';
 import FiltroProgramas from '../components/FiltroProgramas.vue';
 import $style from './ProgramasView.module.css';
 
