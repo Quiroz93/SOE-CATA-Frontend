@@ -17,6 +17,7 @@ dist/
 # Env
 .env
 .env.*
+!frontend/.env.example
 
 # Editor
 .vscode/
