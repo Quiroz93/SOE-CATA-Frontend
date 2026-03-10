@@ -7,13 +7,14 @@ module.exports = {
     extend: {
       colors: {
         sena: {
-          green: '#074122',
-          dark: '#006b31',
-          gray: '#f4f6f8',
+          green: '#39A900', // institucional
+          dark: '#1C1C1C',  // institucional
+          gray: '#6B7280',  // institucional
         },
       },
       fontFamily: {
-        sena: ['"Montserrat"', 'system-ui', 'sans-serif'],
+        sena: ['Montserrat', 'sans-serif'],
+        // Mantener otras familias si existen
       },
     },
   },

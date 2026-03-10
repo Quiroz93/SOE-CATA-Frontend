@@ -1,31 +1,45 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
-import { useProgramasStore } from '../stores/programas.store';
-import ProgramaCard from '../components/ProgramaCard.vue';
+import { ref } from 'vue';
 import FiltroProgramas from '../components/FiltroProgramas.vue';
+import ProgramasList from './ProgramasList.vue';
+import $style from './ProgramasView.module.css';
 
-const store = useProgramasStore();
+const filtrosSeleccionados = ref({});
 
-function onFiltrar(filtro: string) {
-  store.fetchProgramas(filtro ? { nombre: filtro } : undefined);
+function onFiltrar(filtros: Record<string, any>) {
+  filtrosSeleccionados.value = filtros;
 }
-
-onMounted(() => {
-  store.fetchProgramas();
-});
 </script>
 
 <template>
-  <div>
-    <h1>Programas de Formación</h1>
-    <FiltroProgramas @filtrar="onFiltrar" />
-    <div v-if="store.loading">Cargando...</div>
-    <div v-else>
-      <div v-if="store.programas.length === 0">No hay programas.</div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <ProgramaCard v-for="programa in store.programas" :key="programa.id" :programa="programa" />
+  <div :class="$style.root">
+    <div :class="$style.header">
+      <div>
+        <h1 :class="$style.titulo">Programas de Formación</h1>
+        <p :class="$style.descripcion">Descubre oportunidades educativas y especialízate en áreas de alta demanda.</p>
       </div>
-      <div v-if="store.meta.total" class="mt-4">Total: {{ store.meta.total }}</div>
+      <FiltroProgramas @filtrar="onFiltrar" />
+    </div>
+
+    <div :class="$style.banner">
+      <img src="/images/foto1.jpg" alt="Banner institucional SENA" :class="$style.bannerImg" />
+      <div style="display: flex; flex-direction: column; gap: 16px; width: 100%;">
+        <video controls poster="/images/foto2.jpg" :class="$style.bannerVideo">
+          <source src="/videos/videosena.mp4" type="video/mp4" />
+          Tu navegador no soporta video.
+        </video>
+        <div :class="$style.bannerInfo">
+          <h2 :class="$style.bannerInfoTitulo">¡Transforma tu futuro!</h2>
+          <p :class="$style.bannerInfoDesc">El SENA te ofrece programas de formación gratuitos, certificados y alineados con las necesidades del sector productivo colombiano.</p>
+        </div>
+      </div>
+    </div>
+
+    <ProgramasList :filtros="filtrosSeleccionados" />
+
+    <div :class="$style.acciones">
+      <router-link to="/ofertas" :class="$style.botonPrincipal">Ver Ofertas</router-link>
+      <router-link to="/" :class="$style.botonSecundario">Inicio</router-link>
     </div>
   </div>
 </template>

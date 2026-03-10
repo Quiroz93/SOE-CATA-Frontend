@@ -1,0 +1,54 @@
+/* =========================
+   RESPONSIVE AJUSTE FINO
+========================= */
+
+@media (max-width: 900px) {
+    .featured .programas {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+    .featured .programa-card {
+        max-width: 95vw;
+        min-width: 220px;
+    }
+}
+@media (max-width: 600px) {
+    .featured .programa-card {
+        padding: 0.5rem;
+        border-radius: 10px;
+    }
+    .featured .programa-card-header {
+        padding: 1rem 0.5rem 0.5rem 0.5rem;
+    }
+    .featured .programa-card-body {
+        padding: 0.5rem;
+    }
+    .featured .programa-card-body img {
+        width: 60px;
+        height: 60px;
+    }
+}
+    .featured .programa-card-footer {
+        padding: 0.7rem 0.3rem 1rem 0.3rem;
+    }
+    .featured .footer-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .featured .footer-actions .btn {
+        width: 100%;
+        min-width: unset;
+    }
+
+@media (max-width: 400px) {
+    .featured .programa-card-header h3.categoria {
+        font-size: 1rem;
+    }
+    .featured .programa-card-header p {
+        font-size: 0.8rem;
+    }
+    .featured .programa-card-header h5.titulo-programa {
+        font-size: 1.2rem;
+    }
+}

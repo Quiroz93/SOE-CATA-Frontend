@@ -1,0 +1,21 @@
+/* Solo estilos responsivos */
+@media (max-width: 900px) {
+  #blog .labels {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #blog .content {
+    padding: var(--espaciado-md);
+    display: inline;
+  }
+
+  #blog .services-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaciado-lg);
+    margin-top: 25px;
+  }
+}

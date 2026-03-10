@@ -1,0 +1,82 @@
+/* ProgramaCard.module.css
+   Estilos alineados con DesingStyleStandard.md (SENA UI)
+*/
+
+.programaCard {
+  background: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,48,77,0.08);
+  border: 1px solid #E0E0E0;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: 'Inter', 'Roboto', 'Open Sans', Arial, sans-serif;
+  color: #000000;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+
+.programaCard:hover {
+  box-shadow: 0 4px 16px rgba(0,120,50,0.16);
+  border-color: #007832;
+}
+
+.titulo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #00304D;
+  margin-bottom: 8px;
+}
+
+.descripcion {
+  font-size: 1rem;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.estado {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  background: #39A900;
+  color: #FFFFFF;
+}
+
+.acciones {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.botonPrincipal {
+  background: #39A900;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.botonPrincipal:hover {
+  background: #007832;
+}
+
+.botonSecundario {
+  background: transparent;
+  color: #00304D;
+  border: 1px solid #00304D;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.botonSecundario:hover {
+  background: #00304D;
+  color: #FFFFFF;
+}

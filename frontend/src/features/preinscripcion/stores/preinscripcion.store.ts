@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { preinscripcionService } from '../services/preinscripcion.service';
+import { preinscripcionService } from '@/features/preinscripcion/services/preinscripcion.service';
 import type { PreinscripcionPayload } from '../types/preinscripcion.types';
 
 export const usePreinscripcionStore = defineStore('preinscripcion', {

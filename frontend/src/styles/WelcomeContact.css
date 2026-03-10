@@ -1,0 +1,9 @@
+/* Solo estilos responsivos */
+@media (max-width: 900px) {
+  .contact .heading-container {
+    text-align: center;
+  }
+  form .group {
+    flex-direction: column;
+  }
+}

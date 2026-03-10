@@ -1,0 +1,9 @@
+/* Solo estilos responsivos */
+@media (max-width: 900px) {
+  #about .container {
+    flex-direction: column;
+  }
+  .features-container {
+    grid-template-columns: 1fr;
+  }
+}

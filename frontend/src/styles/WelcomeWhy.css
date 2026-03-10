@@ -1,0 +1,25 @@
+/* Solo estilos responsivos */
+@media (max-width: 900px) {
+  #why .container {
+    flex-direction: column;
+    gap: var(--espaciado-3xl);
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  #why .container {
+    padding: 0 1rem;
+  }
+  #why .feature {
+    margin-bottom: 2rem;
+  }
+  #why .right .features-container {
+    display: flex;
+        flex-direction: column;
+        gap: var(--espaciado-lg);
+        margin-top: 25px;
+  }
+
+
+}

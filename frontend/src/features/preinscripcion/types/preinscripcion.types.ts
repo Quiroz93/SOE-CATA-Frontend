@@ -1,14 +1,15 @@
 export interface PreinscripcionPayload {
-  programa_id: number;
+  oferta_programa_id: number;
+  tipo_documento: string;
+  numero_documento: string;
   nombres: string;
   apellidos: string;
-  documento: string;
-  correo: string;
+  email: string;
   telefono: string;
 }
 
 export interface PreinscripcionResponse {
   id: number;
-  programa_id: number;
+  oferta_programa_id: number;
   estado: string;
 }

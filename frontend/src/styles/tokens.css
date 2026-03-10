@@ -1,0 +1,61 @@
+/* ================================================================
+   TOKENS DE DISEÑO - MANUAL DE IDENTIDAD VISUAL SENA 2024
+   ================================================================ */
+
+:root {
+    /* COLORES PRINCIPALES SENA */
+    --sena-verde-principal: #39A900;
+    --sena-verde-oscuro: #007832;
+    
+    /* COLORES SECUNDARIOS AUTORIZADOS */
+    --sena-azul-oscuro: #00304D;
+    --sena-azul-claro: #50E5F9;
+    --sena-violeta: #71277A;
+    --sena-amarillo: #FDC300;
+    
+    /* COLORES NEUTROS */
+    --sena-blanco: #FFFFFF;
+    --sena-gris-claro: #F6F6F6;
+    --sena-gris-medio: #E0E0E0;
+    --sena-gris-texto: #4A4A4A;
+    --sena-negro: #000000;
+    
+    /* VARIACIONES DE VERDE PARA HOVER/ESTADOS */
+    --sena-verde-hover: #2d8000;
+    --sena-verde-light: rgba(57, 169, 0, 0.1);
+    
+    /* APLICACIÓN DE COLORES A ELEMENTOS */
+    --color-primario: var(--sena-verde-principal);
+    --color-primario-hover: var(--sena-verde-hover);
+    --color-texto-principal: var(--sena-gris-texto);
+    --color-texto-claro: var(--sena-blanco);
+    --color-fondo: var(--sena-blanco);
+    --color-fondo-alternativo: var(--sena-gris-claro);
+    --color-sombra: rgba(0, 0, 0, 0.5);
+    
+    /* TIPOGRAFÍA */
+    --fuente-principal: "Work Sans", sans-serif;
+    
+    /* ESPACIADO */
+    --espaciado-xs: 8px;
+    --espaciado-sm: 16px;
+    --espaciado-md: 24px;
+    --espaciado-lg: 32px;
+    --espaciado-xl: 48px;
+    --espaciado-2xl: 60px;
+    --espaciado-3xl: 80px;
+    
+    /* BORDES */
+    --radio-sm: 4px;
+    --radio-md: 8px;
+    --radio-lg: 16px;
+    --radio-xl: 30px;
+    
+    /* TRANSICIONES */
+    --transicion-rapida: 200ms ease;
+    --transicion-normal: 300ms ease;
+
+    --titulo-color: linear-gradient(90deg, var(--sena-azul-oscuro) 0%, var(--sena-verde-principal) 100%);
+    --titulo-color2: linear-gradient(90deg, var(--sena-violeta) 0%, var(--sena-amarillo) 100%);
+
+}

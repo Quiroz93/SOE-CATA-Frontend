@@ -1,0 +1,61 @@
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left,
+  .right {
+    max-width: 100%;
+  }
+
+  .right {
+    justify-content: center;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header .btn {
+    width: 100%;
+    max-width: 320px;
+    margin: 1rem 1rem 0.5rem 0;
+  }
+}
+
+@media (max-width: 400px) {
+  header .btn {
+    width: 100%;
+    max-width: none;
+    margin: 0.5rem 0;
+  }
+
+  .bg-color {
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+  
+  }
+}
+
+@media (max-width: 400px) {
+  header h2{
+    overflow: auto;
+  }
+
+  .bg-color {
+    width: 300px;
+    height: 300px;
+    top: 50px;
+    justify-content: center;
+    align-items: center;
+  
+  }
+}

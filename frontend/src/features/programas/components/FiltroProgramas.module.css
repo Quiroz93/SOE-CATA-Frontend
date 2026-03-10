@@ -1,0 +1,48 @@
+/* FiltroProgramas.module.css
+   Estilos alineados con DesingStyleStandard.md (SENA UI)
+*/
+
+.filtroForm {
+  margin-bottom: 24px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.input,
+.select {
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  padding: 8px 12px;
+  width: 100%;
+  max-width: 240px;
+  font-size: 1rem;
+  font-family: 'Inter', 'Roboto', 'Open Sans', Arial, sans-serif;
+  color: #00304D;
+  background: #FFFFFF;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.input:focus,
+.select:focus {
+  outline: none;
+  border-color: #39A900;
+  box-shadow: 0 0 0 2px #39A90033;
+}
+
+.botonFiltrar {
+  background: #39A900;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.botonFiltrar:hover {
+  background: #007832;
+}

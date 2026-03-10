@@ -5,7 +5,8 @@ const http = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL,
   headers: {
     'Content-Type': 'application/json',
-  },
+    'Accept': 'application/json',
+  }
 });
 
 /**
@@ -31,32 +32,49 @@ http.interceptors.response.use(
   (error) => {
     if (error.response) {
       const status = error.response.status;
+      const message = error.response.data?.message || 'Error inesperado';
+      const errors = error.response.data?.data || undefined;
 
       if (status === 422) {
         return Promise.reject({
-          type: 'validation',
-          message: error.response.data.message,
-          errors: error.response.data.data,
+          status,
+          message,
+          errors,
         });
       }
-
+      if (status === 409) {
+        return Promise.reject({
+          status,
+          message: 'Ya existe una preinscripción',
+        });
+      }
+      if (status === 400) {
+        return Promise.reject({
+          status,
+          message: 'Cupos agotados',
+        });
+      }
+      if (status === 429) {
+        return Promise.reject({
+          status,
+          message: 'Demasiadas solicitudes',
+        });
+      }
       if (status === 404) {
         return Promise.reject({
-          type: 'not_found',
+          status,
           message: 'Recurso no encontrado',
         });
       }
-
       if (status >= 500) {
         return Promise.reject({
-          type: 'server_error',
+          status,
           message: 'Error interno del servidor',
         });
       }
     }
-
     return Promise.reject({
-      type: 'network',
+      status: 0,
       message: 'Error de conexión',
     });
   }

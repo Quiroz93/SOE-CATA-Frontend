@@ -1,0 +1,76 @@
+# General
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# Node
+node_modules/
+dist/
+.vite/
+.vite-temp/
+
+# Build
+/build/
+/public/build/
+
+# Env
+.env
+.env.*
+!frontend/.env.example
+
+# Editor
+.vscode/
+.idea/
+
+# Laravel/PHP
+/vendor/
+.phpunit.result.cache
+/.phpunit.cache
+.phpactor.json
+
+# Storage
+/storage/
+/storage/*.key
+/storage/*.log
+/storage/*.txt
+/storage/*.cache
+/storage/framework/
+/storage/logs/
+
+# Otros
+*.sublime-workspace
+*.sublime-project
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.vite-temp/
+frontend/public/build/
+frontend/.env
+frontend/package-lock.json
+
+# Backend
+backend/node_modules/
+backend/vendor/
+backend/storage/
+backend/.env
+backend/.phpunit.result.cache
+backend/.phpunit.cache
+backend/.phpactor.json
+
+# shadcn-vue-landing-page
+shadcn-vue-landing-page/node_modules/
+shadcn-vue-landing-page/dist/
+shadcn-vue-landing-page/.env
+shadcn-vue-landing-page/package-lock.json
+
+# Otros candidatos
+*.bak
+*.swp
+*.swo
+*.orig
+
+# Documentación y análisis
+frontend/docs/analysis/

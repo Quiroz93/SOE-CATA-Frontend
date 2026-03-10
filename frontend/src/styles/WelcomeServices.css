@@ -1,0 +1,15 @@
+/* Solo estilos responsivos */
+@media (max-width: 900px) {
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  .services-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaciado-lg);
+    margin-top: 25px;
+  }
+}

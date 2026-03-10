@@ -1,0 +1,32 @@
+/* PreinscripcionView.module.css
+   Estilos alineados con DesingStyleStandard.md (SENA UI)
+*/
+
+.root {
+  background: #FFFFFF;
+  min-height: 100vh;
+  padding: 32px 16px;
+  font-family: 'Inter', 'Roboto', 'Open Sans', Arial, sans-serif;
+  color: #00304D;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #39A900;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.formulario {
+  width: 100%;
+  max-width: 480px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,48,77,0.08);
+  padding: 32px 24px;
+  margin-bottom: 32px;
+}
